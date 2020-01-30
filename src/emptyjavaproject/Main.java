@@ -16,6 +16,18 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /* Rectangle rectangle1 = new Rectangle();
+        Rectangle rectangle2 = new Rectangle(5,7);
+        Square square1 = new Square();
+        Square square2 = new Square(5);
+        System.out.println(rectangle1);
+        System.out.println(rectangle2);
+        System.out.println(square1);
+        System.out.println(square2);*/
+        Measurement height = new Measurement(10,"inches");
+        Measurement width = new Measurement (2,"feet");
+        Rectangle rectangle = new Rectangle(height,width);
+        Square square = new Square(width);
     }
     
 }
