@@ -3,22 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package SquarePegRoundHole;
 
 /**
  *
  * @author jonathan.gabl
  */
 public class Measurement {
-    private int value;
+    private double value;
     private String unit;
     
-    public Measurement(int value, String unit){
+    public Measurement(double value, String unit){
         this.value = value;
         this.unit = unit;
     }
-    public int getValue(){
+    public double getValue(){
         return value;
+    }
+    
+    public String getUnit(){
+        return unit;
     }
     
     @Override

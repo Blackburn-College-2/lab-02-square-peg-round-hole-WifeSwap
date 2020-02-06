@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package SquarePegRoundHole;
 
 /**
  *
@@ -11,16 +11,27 @@ package emptyjavaproject;
  */
 public class Square extends Rectangle {
 
-    private double side;
+    private Measurement side;
 
     public Square(Measurement side) {
         super(side, side);
-        this.side = side.getValue();
+        this.side = side;
         System.out.println("New Square: " + side);
     }
 
     @Override
     public String toString() {
         return ("Square of " + side);
+    }
+
+    public Measurement getPerimeter() {
+        Measurement perimeter = new Measurement(4*side.getValue(),side.getUnit());
+        return perimeter;
+
+    }
+
+    public Measurement getArea() {
+        Measurement area = new Measurement(Math.pow(side.getValue(), 2), "square " + side.getUnit());
+        return area;
     }
 }
